@@ -1,0 +1,28 @@
+{
+    "name": "huangdijia/sphinx-client",
+    "description": "A Sphinx client library for PHP8",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Huangdijia",
+            "email": "huangdijia@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "huangdijia/php-coding-standard": "^2.3",
+        "phpstan/phpstan": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huangdijia\\SphinxClient\\": "src/"
+        }
+    },
+    "scripts": {
+        "analyse": "@php vendor/bin/phpstan analyse --memory-limit 512M -l 5 -c phpstan.neon ",
+        "cs-fix": "@php vendor/bin/php-cs-fixer fix $1"
+    }
+}

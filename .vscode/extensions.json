@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "junstyle.php-cs-fixer",
+        "streetsidesoftware.code-spell-checker",
+        "recca0120.vscode-phpunit",
+        "hbenl.vscode-test-explorer",
+        "ctf0.php-namespace-resolver",
+        "devsense.composer-php-vscode"
+    ]
+}

@@ -1,0 +1,14 @@
+.buildpath
+.settings/
+.project
+*.patch
+.idea/
+.git/
+vendor/
+.phpintel/
+.env
+.DS_Store
+*.cache
+.bashrc
+
+.vscode/launch.json
