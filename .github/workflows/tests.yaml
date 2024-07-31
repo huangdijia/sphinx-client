@@ -61,4 +61,4 @@ jobs:
       - name: Run Analyse
         run: composer analyse src
       - name: Run Test Cases
-        run: php vendor/bin/pest --parallel
+        run: composer test
