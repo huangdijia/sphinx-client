@@ -412,10 +412,6 @@ class Client
      */
     public function setServer(string $host, int $port = 0)
     {
-        if (! is_string($host)) {
-            throw new InvalidArgumentException('Host name must be a string.');
-        }
-
         if ($host[0] === '/') {
             $this->path = 'unix://' . $host;
 
@@ -827,14 +823,6 @@ class Client
      */
     public function setGroupBy(string $attribute, int $func, string $groupSort = '@group desc')
     {
-        if (! is_string($attribute)) {
-            throw new InvalidArgumentException('Attribute name must be a string.');
-        }
-
-        if (! is_string($groupSort)) {
-            throw new InvalidArgumentException('Group sorting clause must be a string.');
-        }
-
         if (! in_array(
             $func,
             [
@@ -1445,7 +1433,7 @@ class Client
      * Batch update given attributes in given documents.
      *
      * @param string $index search index
-     * @param array $attrs array of attribute names
+     * @param array<string> $attrs array of attribute names
      * @param array $values hash of arrays of new attribute values keyed by document ID
      * @param bool $mva whether to treat attributes as MVAs
      *
