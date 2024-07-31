@@ -14,6 +14,7 @@
     },
     "require-dev": {
         "huangdijia/php-coding-standard": "^2.3",
+        "pestphp/pest": "^1.0|^2.0",
         "phpstan/phpstan": "^1.11"
     },
     "autoload": {
@@ -23,6 +24,12 @@
     },
     "scripts": {
         "analyse": "@php vendor/bin/phpstan analyse --memory-limit 512M -l 5 -c phpstan.neon ",
-        "cs-fix": "@php vendor/bin/php-cs-fixer fix $1"
+        "cs-fix": "@php vendor/bin/php-cs-fixer fix $1",
+        "test": "@php vendor/bin/pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
