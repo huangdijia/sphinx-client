@@ -1166,7 +1166,7 @@ class Client
     public function runQueries()
     {
         if (empty($this->reqs)) {
-            $this->error = 'no queries defined, issue addQuery() first';
+            $this->error = 'No queries defined, issue addQuery() first';
 
             return false;
         }
@@ -1204,7 +1204,7 @@ class Client
     /**
      * Connect to searchd and generate excerpts (snippets) from given documents for a given query.
      *
-     * @param array $docs array of strings that carry the document contents
+     * @param string[] $docs array of strings that carry the document contents
      * @param string $index name of the index
      * @param string $words string that contains the keywords to highlight
      * @param array $opts hash which contains additional optional highlighting parameters
